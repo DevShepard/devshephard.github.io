@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>ss · DEVshepard&#39;s Studio</title>
+    <title>AI深度学习基本原理 · DEVshepard&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -210,7 +210,7 @@
                 <a href="/" >起源研究所</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">ss</a>
+                <a href="#" class="post-name">AI深度学习基本原理</a>
             </div>
     </div>
     
@@ -242,7 +242,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            ss
+            AI深度学习基本原理
             <!-- 404 -->
             
         </h1>
@@ -261,7 +261,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">0</span> / Reading time: <span class="post-count">1 min</span></span>
+                        <span>Word count: <span class="post-count">3,226</span> / Reading time: <span class="post-count">11 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -390,13 +390,33 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        
+        <h3 id="作者-DEVshepard"><a href="#作者-DEVshepard" class="headerlink" title="作者:DEVshepard"></a>作者:DEVshepard</h3><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>好久不见！最近事情挺多的,在学校也是考试周,本想在6月中旬发表的这篇博文,由于比较忙,因此现在才能和大家见面,但现在考完试了嘛,就回乡下探亲游玩,发现这样拖下去可能8月中旬才能将这篇文章post上来,最后发现不能再拖了,就干脆在我游玩之际将整篇AI深度学习解析加班加点给做出来,方便大家学习。emmmmmm…..这里先跟大家道个歉但请各位谅解(苦笑).<br>本篇文章讲解的是AI领域的深度学习基本原理,与上一篇AI领域的机器学习可能有所出入,如果上一篇文章大家还不怎么理解,没关系,本篇文章将会带领大家进入一个全新的AI领域—-深度学习领域,DEVshepard也会以不同的讲解方式给大家讲解深度学习.</p>
+<h4 id="注意-篇文章由于会涉及数学原理-因此如有错误-敬请指出！！！"><a href="#注意-篇文章由于会涉及数学原理-因此如有错误-敬请指出！！！" class="headerlink" title="注意:篇文章由于会涉及数学原理,因此如有错误,敬请指出！！！"></a>注意:篇文章由于会涉及数学原理,因此如有错误,敬请指出！！！</h4><h2 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h2><p>如果想对比机器学习和深度学习,那么可以这样去区分两者,相同点是两者都是对大数据的处理并获取内部潜在的一系列规则,然后去优化这些规则,并利用这些规则去预测未知的事物,不同点就在于前者(机器学习),更偏向于数据处理与信息理论,后者(深度学习)更偏向于神经网络与人类智能理论,但是八九不离十,两者都是AI。</p>
+<h4 id="深度学习-神经网络又是怎么回事"><a href="#深度学习-神经网络又是怎么回事" class="headerlink" title="深度学习? 神经网络又是怎么回事?"></a>深度学习? 神经网络又是怎么回事?</h4><p>要提起深度学习的根源,其历史也是较为久远的,早在1956年,已经提出了效仿人类神经网络的模型,我们称之为”感知机”,其专业术语叫做”M-P神经元模型”,感知机奠定的AI基础是牢固的<br>下图为”M-P神经元模型”<br><img src="/2018/08/13/ss/1.jpg" alt="ss"><br>其中的字母我们可以这样理解:<br>1.“x”表示其他神经元输入过来的电信号<br>2.“w”表示权重,每一根连接神经元的轴突上都会有一个”w”与之对应<br>3.中间的圆形区域表示一个神经元<br>4.w<em>x表示”会有多少个电信号注入该神经元当中”<br>5.“b”表示偏置<br>6.“蓝色箭头”表示输出<br>7.其中,我们会将轴突的w</em>x在神经元内与b进行相加,如果该f(x)&gt;0,则会输出一个正电位,f(x)&lt;0则输出负电位,f(x)=0,不输出。整体以神经元为角度解析,就是其他神经元传进来的电信号是否符合该神经元的激活要求,如果符合,就激活,否则就会进行惩罚或者是不激活,这就是M-P神经元的基本解析,可以称作为当前人工智能的标准化模型,因为当前的人工智能—深度学习中大部分都是以M-P神经元为根基去生成整个神经网络。</p>
+<h2 id="人工智能浪潮"><a href="#人工智能浪潮" class="headerlink" title="人工智能浪潮"></a>人工智能浪潮</h2><h4 id="感知机的出现"><a href="#感知机的出现" class="headerlink" title="感知机的出现"></a>感知机的出现</h4><p>在当时,感知机的提出使得整个计算机科学界都振奋不已,因此掀起了第一次人工智能浪潮,但是久而久之,人们却发现了该神经元模型的致命弱点——感知机无法处理异或(XOR)问题<br>现在,我们将异或问题魔改一下,该问题就变成了如下这样<br><img src="/2018/08/13/ss/2.jpg" alt="ss"><br>3.那为什么感知机无法处理异或问题?我们可以通过”魔改版”的异或问题来阐述,假设我们的任务是通过一条直线来将0和1分开(在这个图里是将圈和×分开),但是严谨的数学原理告诉我们,要将0和1分开,一条直线是根本做不到的,大家可以手动试试,然而刚刚我们说过”感知机”其内部的神经元结构为####POST感知机公式图 大家很明显的可以看到,f(x)=wx+b是二维坐标轴上的直线公式,w代表斜率,x代表值,b代表Y轴上的偏置,很明显,这是一条直线,因此,这使得第一次人工智能浪潮逐渐衰退,但它奠定了人工智能——深度学习的基础(使得神经网络模型逐渐标准化).</p>
+<h2 id="深度学习——神经网络的基本原理"><a href="#深度学习——神经网络的基本原理" class="headerlink" title="深度学习——神经网络的基本原理"></a>深度学习——神经网络的基本原理</h2><p>为了让大家更好的了解神经网络的运作方式,我找了一张图,暂且就先从这张图入手来讲解<br><img src="/2018/08/13/ss/3.jpg" alt="ss"><br>我们可以看到,这个神经网络有三层,分别是输入层(input),隐藏层(hidden layer),输出层(output),这张图上的v和w分别代表输入层与隐藏层各自的权重,隐藏层与输出层的权重,现在,我们所要做的,就是通过多次的迭代找到v和w的最佳值,使得我们输出的误差值最小,当整个误差值无限趋于目标误差值时,我们就可以说我们 成功地训练了一个神经网络</p>
+<h4 id="注意-训练一个神经网络需要以下几个基本步骤"><a href="#注意-训练一个神经网络需要以下几个基本步骤" class="headerlink" title="注意:训练一个神经网络需要以下几个基本步骤"></a>注意:训练一个神经网络需要以下几个基本步骤</h4><p>1.将v和w(权重初始化)<br>2.输入数据<br>3.计算<br>4.计算输出误差值和目标误差值<br>5.比较输出误差值和目标误差值<br>6.通过反向传播(Backpropagation algorithm)训练神经网络<br>7.调整权重使得权重各个的值达到最佳(使输出误差不断趋近于目标误差)<br>以上就是整个神经网络的基本训练步骤,当然,这里对训练起到最大作用的是步骤3当的反向传播算法(Backpropagation algorithm),接下来我们将通过数学一一解析整个深度学习的过程<br>现在我们可以看到中间有两个隐藏层节点,那么我们就先给上方的隐藏层节点称为<img src="/2018/08/13/ss/4.jpg" alt="ss">,下方的隐藏节点称为<img src="/2018/08/13/ss/5.jpg" alt="ss"></p>
+<h3 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h3><p>所谓的激活函数,就是模拟人类大脑神经元激活的方式,首先我们看看人类大脑神经元激活时的电位信号函数,称之为sgn函数<br><img src="/2018/08/13/ss/6.jpg" alt="ss"><br>我们暂且可以这样理解sgn函数,当神经元未被激活时,电位信号处于0，当神经元被激活时,电位信号处于1,为了模拟人类神经元的激活,我们可以将fu与fd带入到步长函数中,但是问题就来了,在后面的反向传播当中,我们会进行偏导数的计算(求导),但是步长函数根本无法进行求导,那怎么办? 其实我们可以寻找一个与步长函数类似的函数,这个函数,就是sigmoid函数(如下图)<br><img src="/2018/08/13/ss/7.jpg" alt="ss"><br>我们惊喜地发现,sigmoid函数与步长函数非常相似,更棒的是,我们能对他进行求导,这样一来,问题就解决了,现在我们可以通过sigmoid代替步长函数来模拟人类神经元的激活。<br>sigmiod函数的公式为:<img src="/2018/08/13/ss/8.jpg" alt="ss"></p>
+<h3 id="进行计算"><a href="#进行计算" class="headerlink" title="进行计算"></a>进行计算</h3><h4 id="现在我们已经知道了所有要做的步骤-现在我们就细化这些步骤-开始进行计算"><a href="#现在我们已经知道了所有要做的步骤-现在我们就细化这些步骤-开始进行计算" class="headerlink" title="现在我们已经知道了所有要做的步骤,现在我们就细化这些步骤,开始进行计算"></a>现在我们已经知道了所有要做的步骤,现在我们就细化这些步骤,开始进行计算</h4><p><img src="/2018/08/13/ss/9.jpg" alt="ss">与<img src="/2018/08/13/ss/10.jpg" alt="ss">的计算<br>首先我们要将各个输入值与其权重相乘,然后求它的和<br><img src="/2018/08/13/ss/11.jpg" alt="ss"><br>现在我们已经得出了<img src="/2018/08/13/ss/12.jpg" alt="ss">和<img src="/2018/08/13/ss/13.jpg" alt="ss">,但是切记,这并不是最终的结果,我们还要带入激活函数中求最后的值,这个值才能作为后面计算的数据！<br>带入激活函数后的值(下图)<br><img src="/2018/08/13/ss/14.jpg" alt="ss"><br>现在我们得到了通过激活函数后的值<img src="/2018/08/13/ss/15.jpg" alt="ss">和<img src="/2018/08/13/ss/16.jpg" alt="ss">,这两个值才能作为后面计算的数据</p>
+<h4 id="隐藏层到输出层的计算"><a href="#隐藏层到输出层的计算" class="headerlink" title="隐藏层到输出层的计算"></a>隐藏层到输出层的计算</h4><p>输出层的计算与上面隐藏层的计算相同,这里我就不在多说了,大家认真看完上面的下面的计算应该就能懂<br><img src="/2018/08/13/ss/17.jpg" alt="ss"><br>上面是计算输出层的初步计算,下面才是真正最终的计算值<br><img src="/2018/08/13/ss/18.jpg" alt="ss"><br>现在,我们已经完成了向前传导的计算,下面就要进行最重要的步骤,反向传播算法的解析<br>(其实上述步骤有个值b,这个值叫做偏置,偏置的作用就是提高神经网络的性能,简单来说,就是让你最终的值更接近你的目标值,在这里就先不做深究,总之大家理解就行了)</p>
+<h2 id="反向传播算法-Backpropagation-algorithm"><a href="#反向传播算法-Backpropagation-algorithm" class="headerlink" title="反向传播算法(Backpropagation algorithm)"></a>反向传播算法(Backpropagation algorithm)</h2><h4 id="反向传播算法-简称BP算法，该算法的目的就是为了训练神经网络使其输出正确的值-通过偏导数来计算各个权重对整体误差的”贡献”到底有多少-如果某权重使整体的输出误差值偏大-那么我们就要更改这个权重-这就是BP算法-至于偏导数-在数学逻辑上抽象地讲就是某一变化量对整体结果的变化率有多少"><a href="#反向传播算法-简称BP算法，该算法的目的就是为了训练神经网络使其输出正确的值-通过偏导数来计算各个权重对整体误差的”贡献”到底有多少-如果某权重使整体的输出误差值偏大-那么我们就要更改这个权重-这就是BP算法-至于偏导数-在数学逻辑上抽象地讲就是某一变化量对整体结果的变化率有多少" class="headerlink" title="反向传播算法,简称BP算法，该算法的目的就是为了训练神经网络使其输出正确的值,通过偏导数来计算各个权重对整体误差的”贡献”到底有多少,如果某权重使整体的输出误差值偏大,那么我们就要更改这个权重,这就是BP算法.至于偏导数,在数学逻辑上抽象地讲就是某一变化量对整体结果的变化率有多少"></a>反向传播算法,简称BP算法，该算法的目的就是为了训练神经网络使其输出正确的值,通过偏导数来计算各个权重对整体误差的”贡献”到底有多少,如果某权重使整体的输出误差值偏大,那么我们就要更改这个权重,这就是BP算法.至于偏导数,在数学逻辑上抽象地讲就是某一变化量对整体结果的变化率有多少</h4><p>首先,我们要计算总误差有多少<br><img src="/2018/08/13/ss/19.jpg" alt="ss"><br>这个,大家应该很熟悉了,这就是我们初中所学过的方差,方差用于衡量数据的波动值,而<img src="/2018/08/13/ss/20.jpg" alt="ss">,就是我们的误差值,target是我们期望的值也就是目标值,我们要计算最终的输出值<img src="/2018/08/13/ss/21.jpg" alt="ss">与期望值的总误差<br>假设我们要求v11对整体误差产生了多少影响，同样可以用整体误差对v11求偏导求出<br><img src="/2018/08/13/ss/23.jpg" alt="ss"><br>其他的权重都能用上述的计算方法进行计算,现在,我们就要使用梯度下降算法更新权重</p>
+<h3 id="什么是梯度下降？"><a href="#什么是梯度下降？" class="headerlink" title="什么是梯度下降？"></a>什么是梯度下降？</h3><p>首先我们先看一张函数图像<br><img src="/2018/08/13/ss/24.jpg" alt="ss"><br>y=x^2<br>上图是一张y=x^2的函数图像,简单来说，我们将一个球放入一个形如y=x^2的轨道中,球最终会滑向最低点,梯度下降中,误差数值就相当于这个求,它最终会滑向一个最低点,这个最低点就是我们所说的误差最小值<br>下图为梯度下降公式<br><img src="/2018/08/13/ss/25.jpg" alt="ss"><br>现在,我就简单的阐述一下梯度下降算法,我们先看一张图<br><img src="/2018/08/13/ss/27.jpg" alt="ss"><br>假设c点为函数y的局部最小值,使用梯度下降公式,我们从公式中可以知道,当x=x1时,A点的梯度为负值,因为a大于0,所以x的下一个迭代值在x1的右侧,同理,当x=x2时,x将向左侧迭代.所以我们可以得出结论,在a满足一定条件时,x一定能收敛到x0,这就是我们所说的梯度下降</p>
+<h4 id="现在将使用梯度下降更新权重"><a href="#现在将使用梯度下降更新权重" class="headerlink" title="现在将使用梯度下降更新权重"></a>现在将使用梯度下降更新权重</h4><p>假设我们要更新w11的权重,我们就可以将其带入梯度下降公式当中<br><img src="/2018/08/13/ss/26.jpg" alt="ss"></p>
+<h4 id="其中-a代表的是学习速率-这个值可以自己设定-但是不要以为学习速率越大就越好-过大的学习速率会使得结果过拟合-机器学习-所以选择一个合适的学习速率也非常重要。神经网络将会多次迭代上述的整个过程-最终使得权重达到一定的数值使得误差最小。"><a href="#其中-a代表的是学习速率-这个值可以自己设定-但是不要以为学习速率越大就越好-过大的学习速率会使得结果过拟合-机器学习-所以选择一个合适的学习速率也非常重要。神经网络将会多次迭代上述的整个过程-最终使得权重达到一定的数值使得误差最小。" class="headerlink" title="其中,a代表的是学习速率,这个值可以自己设定,但是不要以为学习速率越大就越好,过大的学习速率会使得结果过拟合(机器学习),所以选择一个合适的学习速率也非常重要。神经网络将会多次迭代上述的整个过程,最终使得权重达到一定的数值使得误差最小。"></a>其中,a代表的是学习速率,这个值可以自己设定,但是不要以为学习速率越大就越好,过大的学习速率会使得结果过拟合(机器学习),所以选择一个合适的学习速率也非常重要。神经网络将会多次迭代上述的整个过程,最终使得权重达到一定的数值使得误差最小。</h4><p>现在,我们就大概过了一遍AI深度学习的基本算法与原理,其实现在层出不穷的深度学习算法都有它的优点和缺点,选择一个好算法是最重要的,但是AI,永远不会止步</p>
+<h3 id="游戏安利环节之tensorflowplayground"><a href="#游戏安利环节之tensorflowplayground" class="headerlink" title="游戏安利环节之tensorflowplayground"></a>游戏安利环节之tensorflowplayground</h3><p>最后呢,给大家安利一个网页游戏(23333……)一个神奇的网页游戏,当然不是4399,而是tensorflow游乐场<br><img src="/2018/08/13/ss/29.jpg" alt="ss"><br>“别担心,你永远不会玩坏”<br><img src="/2018/08/13/ss/30.jpg" alt="ss"><br>上图就是游乐场的整体界面,我们看到左侧有很多供我们玩耍的数据图,我们的游戏人物就是通过组合各个函数通过神经网络来讲橙点与蓝点分开,上方也有很多激活函数供我们选择,大家可以肆意地更改那些方块状的东西,通过一系列组合最终将两种不同颜色的点分开。(目前的最好组合是4，8，8，4的模型结构？)点击”播放键即可开始游戏“,大家可以通过这个网页游戏更好地了解深度学习<br>感谢大家的支持,我的AI也在学习中</p>
+<h3 id="写的不好大家原谅-如有错误-请一定要联系我！！！"><a href="#写的不好大家原谅-如有错误-请一定要联系我！！！" class="headerlink" title="写的不好大家原谅,如有错误,请一定要联系我！！！"></a>写的不好大家原谅,如有错误,请一定要联系我！！！</h3><p>参考资料：《高等数学》同济大学第六版第二册<br>技术支持：DEVshepard<br>Wechat： 924192147</p>
+
     </article>
     <!-- license  -->
     
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/08/13/1/" title= 机器学习入门之K-算法解析与6行代码实现人工智能程序 >
+                    <div class="nextTitle">机器学习入门之K-算法解析与6行代码实现人工智能程序</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -519,7 +539,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作者-DEVshepard"><span class="toc-number">1.</span> <span class="toc-text">作者:DEVshepard</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number"></span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意-篇文章由于会涉及数学原理-因此如有错误-敬请指出！！！"><span class="toc-number">0.1.</span> <span class="toc-text">注意:篇文章由于会涉及数学原理,因此如有错误,敬请指出！！！</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#正文"><span class="toc-number"></span> <span class="toc-text">正文</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#深度学习-神经网络又是怎么回事"><span class="toc-number">0.1.</span> <span class="toc-text">深度学习? 神经网络又是怎么回事?</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#人工智能浪潮"><span class="toc-number"></span> <span class="toc-text">人工智能浪潮</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#感知机的出现"><span class="toc-number">0.1.</span> <span class="toc-text">感知机的出现</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#深度学习——神经网络的基本原理"><span class="toc-number"></span> <span class="toc-text">深度学习——神经网络的基本原理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意-训练一个神经网络需要以下几个基本步骤"><span class="toc-number">0.1.</span> <span class="toc-text">注意:训练一个神经网络需要以下几个基本步骤</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#激活函数"><span class="toc-number">1.</span> <span class="toc-text">激活函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#进行计算"><span class="toc-number">2.</span> <span class="toc-text">进行计算</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#现在我们已经知道了所有要做的步骤-现在我们就细化这些步骤-开始进行计算"><span class="toc-number">2.1.</span> <span class="toc-text">现在我们已经知道了所有要做的步骤,现在我们就细化这些步骤,开始进行计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#隐藏层到输出层的计算"><span class="toc-number">2.2.</span> <span class="toc-text">隐藏层到输出层的计算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#反向传播算法-Backpropagation-algorithm"><span class="toc-number"></span> <span class="toc-text">反向传播算法(Backpropagation algorithm)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#反向传播算法-简称BP算法，该算法的目的就是为了训练神经网络使其输出正确的值-通过偏导数来计算各个权重对整体误差的”贡献”到底有多少-如果某权重使整体的输出误差值偏大-那么我们就要更改这个权重-这就是BP算法-至于偏导数-在数学逻辑上抽象地讲就是某一变化量对整体结果的变化率有多少"><span class="toc-number">0.1.</span> <span class="toc-text">反向传播算法,简称BP算法，该算法的目的就是为了训练神经网络使其输出正确的值,通过偏导数来计算各个权重对整体误差的”贡献”到底有多少,如果某权重使整体的输出误差值偏大,那么我们就要更改这个权重,这就是BP算法.至于偏导数,在数学逻辑上抽象地讲就是某一变化量对整体结果的变化率有多少</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是梯度下降？"><span class="toc-number">1.</span> <span class="toc-text">什么是梯度下降？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#现在将使用梯度下降更新权重"><span class="toc-number">1.1.</span> <span class="toc-text">现在将使用梯度下降更新权重</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#其中-a代表的是学习速率-这个值可以自己设定-但是不要以为学习速率越大就越好-过大的学习速率会使得结果过拟合-机器学习-所以选择一个合适的学习速率也非常重要。神经网络将会多次迭代上述的整个过程-最终使得权重达到一定的数值使得误差最小。"><span class="toc-number">1.2.</span> <span class="toc-text">其中,a代表的是学习速率,这个值可以自己设定,但是不要以为学习速率越大就越好,过大的学习速率会使得结果过拟合(机器学习),所以选择一个合适的学习速率也非常重要。神经网络将会多次迭代上述的整个过程,最终使得权重达到一定的数值使得误差最小。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#游戏安利环节之tensorflowplayground"><span class="toc-number">2.</span> <span class="toc-text">游戏安利环节之tensorflowplayground</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写的不好大家原谅-如有错误-请一定要联系我！！！"><span class="toc-number">3.</span> <span class="toc-text">写的不好大家原谅,如有错误,请一定要联系我！！！</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -559,9 +579,20 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 3
+        Total : 4
         </div>
         <!-- search  -->
         
@@ -571,20 +602,6 @@ top:50vh;
     
     
     
-    
-    <div class="archive-year"> 2018 </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2018/08/13/ss/" >ss</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
     
     <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
@@ -606,6 +623,34 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/s/" >机器学习入门之K-算法解析与6行代码实现人工智能程序</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> 2018 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/13</span><a class="archive-post-title" href= "/2018/08/13/ss/" >AI深度学习基本原理</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/1/" >机器学习入门之K-算法解析与6行代码实现人工智能程序</a>
         </li>
     
     </div>
