@@ -400,7 +400,7 @@ height:50vh;
 <h3 id="多层神经网络解决异或问题的原理"><a href="#多层神经网络解决异或问题的原理" class="headerlink" title="多层神经网络解决异或问题的原理"></a>多层神经网络解决异或问题的原理</h3><p>前面提到,一个MP神经网络就是一条直线,现在有两条直线,确实可以解决异或问题,那它是怎么解决的呢？我们可以这样想</p>
 <h4 id="首先是第一个MP神经元模型画出了一条直线-如下图"><a href="#首先是第一个MP神经元模型画出了一条直线-如下图" class="headerlink" title="首先是第一个MP神经元模型画出了一条直线(如下图)"></a>首先是第一个MP神经元模型画出了一条直线(如下图)</h4><p><img src="/2018/08/27/5/9.jpg" alt="5"><br>公式为<br><img src="/2018/08/27/5/10.jpg" alt="5"><br>通过sigmoid的压缩,输出只有0和1,也就是在直线上方(大于0)的时候输出1,在直线下方(小于0)的时候输出0</p>
 <h4 id="然后是第二个MP神经元模型画出了一条直线-如下图"><a href="#然后是第二个MP神经元模型画出了一条直线-如下图" class="headerlink" title="然后是第二个MP神经元模型画出了一条直线(如下图)"></a>然后是第二个MP神经元模型画出了一条直线(如下图)</h4><p><img src="/2018/08/27/5/12.jpg" alt="5"><br>公式为<br><img src="/2018/08/27/5/11.jpg" alt="5"><br>同样通过sigmoid的压缩,输出只有0和1,也就是在直线上方(大于0)的时候输出1,在直线下方(小于0)的时候输出0<br>如果使用数学思维去思考的话,可以这样去解析<br>假设所有权重都为1,那么找到两条直线,其中两条满足条件如下</p>
-<h4 id="上方隐藏层Neuron1-1所构成的直线满足x大于0时-输出大于0-否则小于0"><a href="#上方隐藏层Neuron1-1所构成的直线满足x大于0时-输出大于0-否则小于0" class="headerlink" title="上方隐藏层Neuron1 1所构成的直线满足x大于0时,输出大于0,否则小于0"></a>上方隐藏层Neuron1 1所构成的直线满足x大于0时,输出大于0,否则小于0</h4><h4 id="下方隐藏层Neuron1-2所构成的直线满足x大于2时-输出小于0-否则大于0"><a href="#下方隐藏层Neuron1-2所构成的直线满足x大于2时-输出小于0-否则大于0" class="headerlink" title="下方隐藏层Neuron1 2所构成的直线满足x大于2时,输出小于0,否则大于0"></a>下方隐藏层Neuron1 2所构成的直线满足x大于2时,输出小于0,否则大于0</h4><p>由于有sigmoid激活函数的存在,整个分类过程变得异常方便,现在我们通过公式来运算以下<br>将(1,0),(0,1),(0,0),(1,1)带入多层神经网络当中,其中一条直线如下<br><img src="/2018/08/27/5/13.jpg" alt="5"><br>另一条直线,满足条件如下<br><img src="/2018/08/27/5/14.jpg" alt="5"><br>现在对通过了sigmoid函数的数值进行加权求和<br>1+0=1<br>1+1=2<br>1+1=2<br>0+1=1<br>通过输出神经元的sigmoid函数得出输出结果如下<br><img src="/2018/08/27/5/15.jpg" alt="5"><br>可以看到,我们成功地输出了异或所要的答案.<br>其实多层神经网络非常强大,只要隐藏层神经元足够多的话,甚至能拟合任意函数,驻足在今天,我们也无不感叹人工智能的强大用处,说起来更像是一个黑盒,你把任何东西放进去,都能得到想要的结果.</p>
+<h4 id="上方隐藏层Neuron1-1所构成的直线满足x大于0时-输出大于0-否则小于0"><a href="#上方隐藏层Neuron1-1所构成的直线满足x大于0时-输出大于0-否则小于0" class="headerlink" title="上方隐藏层Neuron1 1所构成的直线满足x大于0时,输出大于0,否则小于0"></a>上方隐藏层Neuron1 1所构成的直线满足x大于0时,输出大于0,否则小于0</h4><h4 id="下方隐藏层Neuron1-2所构成的直线满足x大于2时-输出小于0-否则大于0"><a href="#下方隐藏层Neuron1-2所构成的直线满足x大于2时-输出小于0-否则大于0" class="headerlink" title="下方隐藏层Neuron1 2所构成的直线满足x大于2时,输出小于0,否则大于0"></a>下方隐藏层Neuron1 2所构成的直线满足x大于2时,输出小于0,否则大于0</h4><p>由于有sigmoid激活函数的存在,整个分类过程变得异常方便,现在我们通过公式来运算以下<br>将(1,0),(0,1),(0,0),(1,1)带入多层神经网络当中,其中一条直线如下<br><img src="/2018/08/27/5/13.jpg" alt="5"><br>另一条直线,满足条件如下<br><img src="/2018/08/27/5/14.png" alt="5"><br>现在对通过了sigmoid函数的数值进行加权求和<br>1+0=1<br>1+1=2<br>1+1=2<br>0+1=1<br>通过输出神经元的sigmoid函数得出输出结果如下<br><img src="/2018/08/27/5/15.jpg" alt="5"><br>可以看到,我们成功地输出了异或所要的答案.<br>其实多层神经网络非常强大,只要隐藏层神经元足够多的话,甚至能拟合任意函数,驻足在今天,我们也无不感叹人工智能的强大用处,说起来更像是一个黑盒,你把任何东西放进去,都能得到想要的结果.</p>
 <h4 id="参考资料-DEVshepard的脑子"><a href="#参考资料-DEVshepard的脑子" class="headerlink" title="参考资料:DEVshepard的脑子"></a>参考资料:DEVshepard的脑子</h4><h4 id="技术支持-华南农业大学珠江学院地下工作室"><a href="#技术支持-华南农业大学珠江学院地下工作室" class="headerlink" title="技术支持:华南农业大学珠江学院地下工作室"></a>技术支持:华南农业大学珠江学院地下工作室</h4><h4 id="wechat-924192147"><a href="#wechat-924192147" class="headerlink" title="wechat :924192147"></a>wechat :924192147</h4>
     </article>
     <!-- license  -->
@@ -408,6 +408,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/08/27/4/" title= ���������������������ı�Ǩ >
+                    <div class="nextTitle">���������������������ı�Ǩ</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -618,9 +623,26 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 6
+        Total : 7
         </div>
         <!-- search  -->
         
@@ -636,35 +658,21 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/sss/" >深度学习-Tensorflow线性拟合讲解与代码实现</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/s/" >机器学习入门之K-算法解析与6行代码实现人工智能程序</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
             <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/hello-world/" >欢迎来到起源研究所</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/sss/" >深度学习-Tensorflow线性拟合讲解与代码实现</a>
         </li>
     
     
@@ -687,6 +695,20 @@ top:50vh;
     
         </ul>
     
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/s/" >机器学习入门之K-算法解析与6行代码实现人工智能程序</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
     
@@ -698,6 +720,20 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2018/08/22/ssss/" >手把手教你搭建AI开发环境</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/27/4/" >���������������������ı�Ǩ</a>
         </li>
     
     </div>
