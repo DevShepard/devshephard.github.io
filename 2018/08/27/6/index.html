@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>DEVshepard&#39;s Studio</title>
+    <title>���������������������ı�Ǩ · DEVshepard&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180721 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180721 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -194,14 +196,23 @@
 </head>
 
     
-        <body class="home-body">
+        <body class="post-body">
     
     
-<header class="header index-header">
+<header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >起源研究所</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">���������������������ı�Ǩ</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>起源研究所</a>
 </header>
@@ -222,17 +233,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 文章页  -->
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            起源研究所
-            <!-- 文章页  -->
+            ���������������������ı�Ǩ
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
@@ -240,12 +251,43 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-                Always AI,Always be best
-            
-            <!-- 文章页  -->
+            <!-- 404 -->
             
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">0</span> / Reading time: <span class="post-count">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/08/27</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -346,277 +388,59 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/27/6/" >
-            
-                <span>���������������������ı�Ǩ</span>
-        </a>
-        <div class="abstract-content">
-            
+            <main class="main post-page">
+    <article class="article-entry">
+        <p><img src="/2018/08/27/6/15.jpg" alt="6"></p>
 
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/27</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/27/5/" >
-            
-                <span>从异或问题阐述多层神经网络的变迁</span>
-        </a>
-        <div class="abstract-content">
-            作者:DEVshepard前言其实早在本博客的第一章”k-分类算法与6行实现人工智能程序”的文章中就已经谈到了神经网络与异或问题的关系,异或问题的解决不仅仅造就了多层神经网络,同时也将人工智能深度学习提升到了一个新高度.异或问题在人工智能界其实是40年前的命题,但就算放在AI大力发展的今天也是非常值得我们探讨的
-什么是异或问题异或问题在计算机界应该是一个路人皆知的问题,非常简单,通过0和1的不同组合方式获得两类(0和1)输出(如下图)输入0,0 输出0输入1,0 输出1输入0,1 输出1输入1,1 输出0这就是我们所说的异或问题,通过两个输入(0和1),一个输出(1或0)来表示现在,我们...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/27</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/22/ssss/" >
-            
-                <span>手把手教你搭建AI开发环境</span>
-        </a>
-        <div class="abstract-content">
-            作者:DEVshepard前言这一章本来是要讲解tensorflow实现非线性拟合的案例,但是在做准备的过程中发现有一些数学问题还是无法解释,因此回炉重造,解决完数学问题再来出博客,因此今天打算跟大家聊一聊tensorflow如何入门,喜欢的朋友可以当作AI学习指南.
-PYcharm的安装pycharm的下载安装这里我将会使用pycharm编译器来作为开发工具,因为用了很多的py开发工具还是觉得pycharm好用(pycharm有两个版本,一个是免费的社区版,一个是收费的专业版),但这里我会教大家如何免费使用pycharm的专业版.1.首先下载pycharm2017.3 pycharm下...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/22</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/13/sss/" >
-            
-                <span>深度学习-Tensorflow线性拟合讲解与代码实现</span>
-        </a>
-        <div class="abstract-content">
-            作者:DEVshepard前言最近在研究深度学习技术和tensorflow代码编程,发现深度学习在线性(非线性)拟合方面有着强大的拟合能力,几乎能拟合所有的函数曲线,对于预测类型的AI是一个很好的消息,今天我将会通过理论与实践解析线性(非线性)拟合并通过tensorflow实践
-线性拟合首先是线性拟合,所谓线性拟合,就是利用一条直线将数据点所蕴含的规律表示出来,我们在高中都有学过相关的知识,这个高中的知识点就是”回归函数”—–使用一条经过点最多的直线来描绘函数当前的变化趋势与后变化趋势(预测),这就是所谓的线性拟合线性拟合(如下图)实现线性拟合还是比较好理解的,我们大家都知道最基本的直线...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/13/hello-world/" >
-            
-                <span>欢迎来到起源研究所</span>
-        </a>
-        <div class="abstract-content">
-            欢迎来到起源研究所,DEVshepard将会不定期更新AI,python,tensorflow等相关内容
-联系方式微信1$ 924192147
-钉钉1$ lgh924192174@dingtalk.com
-邮箱1$ 924192147@qq.com
-More info: Deployment
-
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/13/ss/" >
-            
-                <span>AI深度学习基本原理</span>
-        </a>
-        <div class="abstract-content">
-            作者:DEVshepard前言好久不见！最近事情挺多的,在学校也是考试周,本想在6月中旬发表的这篇博文,由于比较忙,因此现在才能和大家见面,但现在考完试了嘛,就回乡下探亲游玩,发现这样拖下去可能8月中旬才能将这篇文章post上来,最后发现不能再拖了,就干脆在我游玩之际将整篇AI深度学习解析加班加点给做出来,方便大家学习。emmmmmm…..这里先跟大家道个歉但请各位谅解(苦笑).本篇文章讲解的是AI领域的深度学习基本原理,与上一篇AI领域的机器学习可能有所出入,如果上一篇文章大家还不怎么理解,没关系,本篇文章将会带领大家进入一个全新的AI领域—-深度学习领域,DEVshepard也会以不...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/08/13/s/" >
-            
-                <span>机器学习入门之K-算法解析与6行代码实现人工智能程序</span>
-        </a>
-        <div class="abstract-content">
-            作者:DEVshephard前言现如今,人工智能正处于大火大热的时代,人工智能中最核心的机器学习和深度学习框架也渐渐为人所知,人工智能作为21世纪计算机科学发展最直观的体现。作为一名程序员应在当今时代应该对人工智能的算法与机制有一定的了解。或者说,人工智能在将来或许将成为计算机科学的分水岭。今天,DEVshepard将解析人工智能-机器学习中的入门算法”K-“分类算法-同时也会告诉大家如何通过6行代码实现第一个人工智能程序。
-准备工作在开始写代码前,我们需要一下几种工具1$ pycharm 2017 3.3
-pycharm官网也有2018版本下载,但是我并不推荐,原因是pycharm本身...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
-    
-</main>
-            <!-- profile -->
+    <ul class="post-paginator">
+        <li class="next">
             
-            <div class="profile">
-    <img class="profile-avatar" src= /avatar/timg.jpg >
-    <div class="profile-name">DEVshepard</div>
-    
-    <div class="profile-signature">
-        AI
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/08/27/5/" title= 从异或问题阐述多层神经网络的变迁 >
+                    <div class="prevTitle">从异或问题阐述多层神经网络的变迁</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zODg0Ni8xNTM3NA==>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
     </div>
+
+<!-- City版安装代码已完成 -->
     
     
-    <div class="profile-social">
-        
+    <!--PC和WAP自适应版-->
+
+    <!--PC版-->
+
+
     
-        
-            
-                <a href="mailto:924192147@qq.com" class="iconfont-archer email" title=email ></a>
-            
-        
-    
-        
-            
-                <a href="//github.com/devshepard" class="iconfont-archer github" target="_blank" title=github></a>
-            
-        
-    
-        
-            
-                <span class="iconfont-archer wechat" title=wechat>
-                  
-                  <img class="profile-qr" src="/assets/ss.png" />
-                </span>
-            
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
-    
-        
     
 
-    </div>
-    
-    
-        <div class="friends">
-            <div>FRIENDS</div>
-            
-                
-                    <span>
-                        <a href= //www.baidu.com target="_black">friendA</a>
-                    </span>
-                
-            
-                
-                    <span>
-                        <a href= //www.google.com target="_black">friendB</a>
-                    </span>
-                
-            
-                
-            
-        </div>
-    
-    
-        <div class="about-me">
-            <a href = "/about" >ABOUT ME</a>
-        </div>
-    
-</div>
+    <!-- 评论 -->
+</main>
+            <!-- profile -->
             
         </div>
         <footer class="footer footer-unloaded">
@@ -695,6 +519,24 @@ pycharm官网也有2018版本下载,但是我并不推荐,原因是pycharm本身
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -947,6 +789,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
