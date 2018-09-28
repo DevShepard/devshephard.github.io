@@ -261,7 +261,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">1,694</span> / Reading time: <span class="post-count">7 min</span></span>
+                        <span>Word count: <span class="post-count">1,688</span> / Reading time: <span class="post-count">7 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -402,7 +402,7 @@ height:50vh;
 <p>初始化所有变量并创建session(session是tensorflow内置的图,这里不需要理解太多),我们可以看到循环结构当中设定为训练500次<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">init = tf.global_variables_initializer()</span><br><span class="line">with tf.Session() as sess:</span><br><span class="line">    sess.run(init)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(500):</span><br><span class="line">        sess.run(opt)</span><br><span class="line">        <span class="keyword">if</span>(i%20==0):</span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"k1="</span>,sess.run(k),<span class="string">"w2"</span>,sess.run(b))</span><br></pre></td></tr></table></figure></p>
 <p>完整代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf     <span class="comment">#载入tensorflow库</span></span><br><span class="line">import  numpy as np         <span class="comment">#载入numpy数学库</span></span><br><span class="line"></span><br><span class="line">x = np.random.randn(100)    <span class="comment">#生成100个数据点</span></span><br><span class="line">y = 2*x+1                   <span class="comment">#将数据点设置为y=2x+1上的点</span></span><br><span class="line"></span><br><span class="line">k = tf.Variable(0.)         <span class="comment">#创建变量k</span></span><br><span class="line">b = tf.Variable(0.)         <span class="comment">#创建变量b</span></span><br><span class="line"></span><br><span class="line">Y = k*x+b                   <span class="comment">#创建拟合模型</span></span><br><span class="line"></span><br><span class="line">loss = tf.reduce_mean(tf.square(y-Y))     <span class="comment">#使用方差来表示误差值</span></span><br><span class="line">opt = tf.train.AdamOptimizer(0.1).minimize(loss)   <span class="comment">#以0.1为梯度下降速率使得误差下降到最小值</span></span><br><span class="line">init = tf.global_variables_initializer()        <span class="comment">#初始化变量</span></span><br><span class="line">with tf.Session() as sess:                    <span class="comment">#启动session</span></span><br><span class="line">    sess.run(init)                           <span class="comment">#运行初始化                             </span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(500):                     <span class="comment">#训练500次</span></span><br><span class="line">        sess.run(opt)                        <span class="comment">#运行优化器优化k与b</span></span><br><span class="line">        <span class="keyword">if</span>(i%20==0):                         <span class="comment">#每训练20次输出一次k与b</span></span><br><span class="line">            <span class="built_in">print</span>(<span class="string">"k="</span>,sess.run(k),<span class="string">"b"</span>,sess.run(b))      <span class="comment">#输出k与b</span></span><br></pre></td></tr></table></figure></p>
 <p>最终输出<br><img src="/2018/08/13/sss/2.jpg" alt="sss"><br>我们可以看到一开始的k值与b值为0.09,最后通过不断的训练达到k无限接近与2,b为1,这个结果非常的理想,同时我们也看到了tensorflow的强大之处,不超过20行的代码就能编写一个AI程序(Google还是很6的啊),最终我们成功地拟合了一条直线<br>下一期将讲解非线性拟合,进一步通过基础进阶</p>
-<h4 id="参考资料-https-zh-wikipedia-org-wiki-Wikipedia-E9-A6-96-E9-A1-B5"><a href="#参考资料-https-zh-wikipedia-org-wiki-Wikipedia-E9-A6-96-E9-A1-B5" class="headerlink" title="参考资料:https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5"></a>参考资料:<a href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5</a></h4><h4 id="技术支持-华南农业大学珠江学院地下工作室"><a href="#技术支持-华南农业大学珠江学院地下工作室" class="headerlink" title="技术支持:华南农业大学珠江学院地下工作室"></a>技术支持:华南农业大学珠江学院地下工作室</h4><h4 id="wechat-924192147"><a href="#wechat-924192147" class="headerlink" title="wechat :924192147"></a>wechat :924192147</h4>
+<h4 id="参考资料-DEVshepard的生物神经网络"><a href="#参考资料-DEVshepard的生物神经网络" class="headerlink" title="参考资料:DEVshepard的生物神经网络"></a>参考资料:DEVshepard的生物神经网络</h4><h4 id="技术支持-华南农业大学珠江学IT学研会"><a href="#技术支持-华南农业大学珠江学IT学研会" class="headerlink" title="技术支持:华南农业大学珠江学IT学研会"></a>技术支持:华南农业大学珠江学IT学研会</h4><h4 id="wechat-924192147"><a href="#wechat-924192147" class="headerlink" title="wechat :924192147"></a>wechat :924192147</h4>
     </article>
     <!-- license  -->
     
@@ -551,7 +551,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作者-DEVshepard"><span class="toc-number">1.</span> <span class="toc-text">作者:DEVshepard</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number"></span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线性拟合"><span class="toc-number"></span> <span class="toc-text">线性拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过计算机处理线性拟合"><span class="toc-number"></span> <span class="toc-text">通过计算机处理线性拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意-步骤4当中为了让大家理解清楚-所以将误差公式简化-y-y’-真正用于计算误差的公式为1-2-y-y’-2-也就是我们所说的方差-还有一点就是有些童鞋们感觉这无非就是个试错的过程-其实并非如此-我们会通过算法来找到错误点改变错误并降低错误的发生-并非试错-具体算法请查看本博客上一章内容—-AI深度学习基本原理戳我跳转相关页面"><span class="toc-number">0.1.</span> <span class="toc-text">注意:步骤4当中为了让大家理解清楚,所以将误差公式简化(y-y’),真正用于计算误差的公式为1/2(y-y’)**2,也就是我们所说的方差.还有一点就是有些童鞋们感觉这无非就是个试错的过程,其实并非如此,我们会通过算法来找到错误点改变错误并降低错误的发生,并非试错,具体算法请查看本博客上一章内容—-AI深度学习基本原理戳我跳转相关页面</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Tensorflow实现一个线性拟合算法"><span class="toc-number"></span> <span class="toc-text">通过Tensorflow实现一个线性拟合算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用工具"><span class="toc-number">1.</span> <span class="toc-text">使用工具:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">2.</span> <span class="toc-text">代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#参考资料-https-zh-wikipedia-org-wiki-Wikipedia-E9-A6-96-E9-A1-B5"><span class="toc-number">2.1.</span> <span class="toc-text">参考资料:https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#技术支持-华南农业大学珠江学院地下工作室"><span class="toc-number">2.2.</span> <span class="toc-text">技术支持:华南农业大学珠江学院地下工作室</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wechat-924192147"><span class="toc-number">2.3.</span> <span class="toc-text">wechat :924192147</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作者-DEVshepard"><span class="toc-number">1.</span> <span class="toc-text">作者:DEVshepard</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number"></span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#线性拟合"><span class="toc-number"></span> <span class="toc-text">线性拟合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过计算机处理线性拟合"><span class="toc-number"></span> <span class="toc-text">通过计算机处理线性拟合</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意-步骤4当中为了让大家理解清楚-所以将误差公式简化-y-y’-真正用于计算误差的公式为1-2-y-y’-2-也就是我们所说的方差-还有一点就是有些童鞋们感觉这无非就是个试错的过程-其实并非如此-我们会通过算法来找到错误点改变错误并降低错误的发生-并非试错-具体算法请查看本博客上一章内容—-AI深度学习基本原理戳我跳转相关页面"><span class="toc-number">0.1.</span> <span class="toc-text">注意:步骤4当中为了让大家理解清楚,所以将误差公式简化(y-y’),真正用于计算误差的公式为1/2(y-y’)**2,也就是我们所说的方差.还有一点就是有些童鞋们感觉这无非就是个试错的过程,其实并非如此,我们会通过算法来找到错误点改变错误并降低错误的发生,并非试错,具体算法请查看本博客上一章内容—-AI深度学习基本原理戳我跳转相关页面</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#通过Tensorflow实现一个线性拟合算法"><span class="toc-number"></span> <span class="toc-text">通过Tensorflow实现一个线性拟合算法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#使用工具"><span class="toc-number">1.</span> <span class="toc-text">使用工具:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#代码实现"><span class="toc-number">2.</span> <span class="toc-text">代码实现</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#参考资料-DEVshepard的生物神经网络"><span class="toc-number">2.1.</span> <span class="toc-text">参考资料:DEVshepard的生物神经网络</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#技术支持-华南农业大学珠江学IT学研会"><span class="toc-number">2.2.</span> <span class="toc-text">技术支持:华南农业大学珠江学IT学研会</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#wechat-924192147"><span class="toc-number">2.3.</span> <span class="toc-text">wechat :924192147</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -656,12 +656,12 @@ top:50vh;
     
     
     
-    <div class="archive-year"> 2018 </div>
+    <div class="archive-year"> Invalid date </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">09/13</span><a class="archive-post-title" href= "/2018/09/13/sssssss/" >使用Tensorflow编写多层神经网络</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/ss/" >AI深度学习基本原理</a>
         </li>
     
     
@@ -670,12 +670,12 @@ top:50vh;
     
         </ul>
     
-    <div class="archive-year"> Invalid date </div>
+    <div class="archive-year"> 2018 </div>
     <ul class="year-list">
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/s/" >机器学习入门之K-算法解析与6行代码实现人工智能程序</a>
+            <span class="archive-post-date">09/13</span><a class="archive-post-title" href= "/2018/09/13/sssssss/" >使用Tensorflow编写多层神经网络</a>
         </li>
     
     
@@ -703,7 +703,21 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/ss/" >AI深度学习基本原理</a>
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/s/" >机器学习入门之K-算法解析与6行代码实现人工智能程序</a>
+        </li>
+    
+    
+    
+    
+    
+        </ul>
+    
+    <div class="archive-year"> Invalid date </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/hello-world/" >欢迎来到起源研究所</a>
         </li>
     
     
@@ -723,20 +737,6 @@ top:50vh;
     
         <li class="archive-post-item">
             <span class="archive-post-date">08/22</span><a class="archive-post-title" href= "/2018/08/22/ssss/" >手把手教你搭建AI开发环境</a>
-        </li>
-    
-    
-    
-    
-    
-        </ul>
-    
-    <div class="archive-year"> Invalid date </div>
-    <ul class="year-list">
-    
-    
-        <li class="archive-post-item">
-            <span class="archive-post-date">Invalid date</span><a class="archive-post-title" href= "/2018/08/13/hello-world/" >欢迎来到起源研究所</a>
         </li>
     
     </div>
