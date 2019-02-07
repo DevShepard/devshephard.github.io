@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>快速安装python编译环境以及编译器 · DEVshepard&#39;s Studio</title>
+    <title>DEVshepard&#39;s Studio</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,8 +70,6 @@
 
     <link rel="preload" href= /css/style.css?v=20180721 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180721 media="(max-width: 980px)">
-    
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -196,23 +194,14 @@
 </head>
 
     
-        <body class="post-body">
+        <body class="home-body">
     
     
-<header class="header">
+<header class="header index-header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
-    
-    <div class="banner">
-            <div class="blog-title">
-                <a href="/" >起源研究所</a>
-            </div>
-            <div class="post-title">
-                <a href="#" class="post-name">快速安装python编译环境以及编译器</a>
-            </div>
-    </div>
     
     <a class="home-link" href=/>起源研究所</a>
 </header>
@@ -233,17 +222,17 @@ height:50vh;
     <!-- 主页  -->
     
     
-    <!-- 404页  -->
+    <!-- 文章页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/index-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            快速安装python编译环境以及编译器
-            <!-- 404 -->
+            起源研究所
+            <!-- 文章页  -->
             
         </h1>
         <!-- 副标题 -->
@@ -251,43 +240,12 @@ height:50vh;
             <!-- 主页副标题  -->
             
             
-            <!-- 404 -->
+                Always AI,Always be best
+            
+            <!-- 文章页  -->
             
         </p>
         <!-- 文章页meta -->
-        
-            <div class="post-intros">
-                <!-- 文章页标签  -->
-                
-                
-                    <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">525</span> / Reading time: <span class="post-count">2 min</span></span>
-                    </div>
-                
-                <div class="post-intro-meta">
-                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                    <span class="post-intro-time">2019/01/16</span>
-                    
-                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
-                        <span class="iconfont-archer">&#xe602;</span>
-                        <span id="busuanzi_value_page_pv"></span>
-                    </span>
-                    
-                    <span class="shareWrapper">
-                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
-                        <span class="shareText">Share</span>
-                        <ul class="shareList">
-                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
-                                <div class="share-qrcode"></div>
-                            </li>
-                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
-                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
-                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
-                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
-                        </ul>
-                    </span>
-                </div>
-            </div>
         
     </div>
 </div>
@@ -388,68 +346,137 @@ height:50vh;
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main post-page">
-    <article class="article-entry">
-        <h3 id="作者-DEVshepard"><a href="#作者-DEVshepard" class="headerlink" title="作者:DEVshepard"></a>作者:DEVshepard</h3><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>用了好久pycharm最后发现这个编译器压根就不适合玩AI(可能是我不会用),但最近我发现了一个迷你的编译器spyder简直超级好用,不管玩python编程还是玩AI编程都特别好用,外加学研会的python任务所以打算给大家写个python安装快速入门</p>
-<h2 id="第一步-下载python"><a href="#第一步-下载python" class="headerlink" title="第一步:下载python"></a>第一步:下载python</h2><p>首先进入python的官网(<a href="https://www.python.org/getit/),选择Download中的windows(如下图所示)" target="_blank" rel="noopener">https://www.python.org/getit/),选择Download中的windows(如下图所示)</a><br><img src="/2019/01/16/4/2.jpg" alt="4"><br>接着找到python3.5.2版本,然后下载(如下图所示)<br><img src="/2019/01/16/4/3.jpg" alt="4"></p>
-<h4 id="注意-记得是python3-x-x版本不是python2-x-x版本-因为这两个版本的代码是不相容的-这里我选择了python3-5-2是因为我进行AI编程时相对比较好用-当然你也可以选择python3-6-x或者python3-7的版本"><a href="#注意-记得是python3-x-x版本不是python2-x-x版本-因为这两个版本的代码是不相容的-这里我选择了python3-5-2是因为我进行AI编程时相对比较好用-当然你也可以选择python3-6-x或者python3-7的版本" class="headerlink" title="注意:记得是python3.x.x版本不是python2.x.x版本,因为这两个版本的代码是不相容的,这里我选择了python3.5.2是因为我进行AI编程时相对比较好用,当然你也可以选择python3.6.x或者python3.7的版本"></a>注意:记得是python3.x.x版本不是python2.x.x版本,因为这两个版本的代码是不相容的,这里我选择了python3.5.2是因为我进行AI编程时相对比较好用,当然你也可以选择python3.6.x或者python3.7的版本</h4><h2 id="第二步-安装python"><a href="#第二步-安装python" class="headerlink" title="第二步:安装python"></a>第二步:安装python</h2><p>打开刚刚下好的python安装包,按照图中所示把勾给勾上<br><img src="/2019/01/16/4/4.jpg" alt="4"><br>接着直接点击Install Now直接安装,等待安装完毕(如下图所示)<br><img src="/2019/01/16/4/5.jpg" alt="4"><br>安装完成后在键盘上使用”WIN+R”组合键打开运行窗口并输入cmd打开命令提示符(如下图所示)<br><img src="/2019/01/16/4/6.jpg" alt="4"><br>打开命令提示符后,输入python,显示结果如下图所示表示安装成功！(如下图所示)<br><img src="/2019/01/16/4/7.jpg" alt="4"></p>
-<h2 id="第三步-安装spyder"><a href="#第三步-安装spyder" class="headerlink" title="第三步:安装spyder"></a>第三步:安装spyder</h2><p>按照上面的方法打开命令提示符,输入:“pip install spyder”,然后等待下载以及安装(如下图所示)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install spyder</span><br></pre></td></tr></table></figure></p>
-<p><img src="/2019/01/16/4/8.jpg" alt="4"><br>安装完成后,在命令提示符中输入spyder3即可打开编译器,现在我们就大功告成了！！！在输入框内输入代码,然后点击spyder上方的绿色箭头就能编译运行程序,我们试试输入Helloworld(如下图所示)<br><img src="/2019/01/16/4/9.jpg" alt="4"></p>
-<h3 id="现在我们就大功告成了！！！"><a href="#现在我们就大功告成了！！！" class="headerlink" title="现在我们就大功告成了！！！,"></a>现在我们就大功告成了！！！,</h3><h2 id="切记-每次打开spyder都要通过”win-R”组合键打开cmd-并输入spyder3才能打开-如果你想快一点的话就找到spyder3的快捷方式复制粘贴到桌面就好了！"><a href="#切记-每次打开spyder都要通过”win-R”组合键打开cmd-并输入spyder3才能打开-如果你想快一点的话就找到spyder3的快捷方式复制粘贴到桌面就好了！" class="headerlink" title="切记,每次打开spyder都要通过”win+R”组合键打开cmd,并输入spyder3才能打开,如果你想快一点的话就找到spyder3的快捷方式复制粘贴到桌面就好了！"></a>切记,每次打开spyder都要通过”win+R”组合键打开cmd,并输入spyder3才能打开,如果你想快一点的话就找到spyder3的快捷方式复制粘贴到桌面就好了！</h2><h3 id="技术支持-DEVshepard-IT学研会"><a href="#技术支持-DEVshepard-IT学研会" class="headerlink" title="技术支持:DEVshepard,IT学研会"></a>技术支持:DEVshepard,IT学研会</h3>
+            <main class="main index-page">
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
+        <a class="abstract-title" href = "/2018/08/13/hello-world/" >
+            
+                <span>欢迎来到起源研究所</span>
+        </a>
+        <div class="abstract-content">
+            欢迎来到起源研究所,DEVshepard将会不定期更新AI,python,tensorflow等相关内容
+联系方式微信1$ 924192147
+钉钉1$ lgh924192174@dingtalk.com
+邮箱1$ 924192147@qq.com
+技术支持:华南农业大学珠江学院IT学研会More info: Deployment
+
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/08/13</span>
+            </div>
+            <!-- tags  -->
+            
+        </div>
     </article>
-    <!-- license  -->
     
     <!-- paginator  -->
-    <ul class="post-paginator">
-        <li class="next">
-            
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2019/02/08/6/" title= (杂谈+番外篇)人工智能到底算不算编程？ >
-                    <div class="nextTitle">(杂谈+番外篇)人工智能到底算不算编程？</div>
-                </a>
-            
-        </li>
-        <li class="previous">
-            
-                <div class="prevSlogan">Previous Post</div>
-                <a href= "/2019/01/09/5/" title= 使用AI-CNN实现手写数字识别 >
-                    <div class="prevTitle">使用AI-CNN实现手写数字识别</div>
-                </a>
-            
-        </li>
-    </ul>
-    <!-- 评论插件 -->
-    <!-- 来必力City版安装代码 -->
-
-    <div id="lv-container" data-id="city" data-uid= MTAyMC8zODg0Ni8xNTM3NA==>
-        <script type="text/javascript">
-            (function (d, s) {
-                var j, e = d.getElementsByTagName(s)[0];
-                if (typeof LivereTower === 'function') { return; }
-                j = d.createElement(s);
-                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
-                j.async = true;
-
-                e.parentNode.insertBefore(j, e);
-            })(document, 'script');
-        </script>
-        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
-    </div>
-
-<!-- City版安装代码已完成 -->
     
+    <nav class="page-nav">
+        <a class="extend prev" rel="prev" href="/">&#60; PREV</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    </nav>
     
-    <!--PC和WAP自适应版-->
-
-    <!--PC版-->
-
-
-    
-    
-
-    <!-- 评论 -->
 </main>
             <!-- profile -->
+            
+            <div class="profile">
+    <img class="profile-avatar" src= /avatar/timg.jpg >
+    <div class="profile-name">DEVshepard</div>
+    
+    <div class="profile-signature">
+        AI
+    </div>
+    
+    
+    <div class="profile-social">
+        
+    
+        
+            
+                <a href="mailto:924192147@qq.com" class="iconfont-archer email" title=email ></a>
+            
+        
+    
+        
+            
+                <a href="//github.com/devshepard" class="iconfont-archer github" target="_blank" title=github></a>
+            
+        
+    
+        
+            
+                <span class="iconfont-archer wechat" title=wechat>
+                  
+                  <img class="profile-qr" src="/assets/ss.png" />
+                </span>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+    </div>
+    
+    
+        <div class="friends">
+            <div>FRIENDS</div>
+            
+                
+                    <span>
+                        <a href= //www.baidu.com target="_black">friendA</a>
+                    </span>
+                
+            
+                
+                    <span>
+                        <a href= //www.google.com target="_black">friendB</a>
+                    </span>
+                
+            
+                
+            
+        </div>
+    
+    
+        <div class="about-me">
+            <a href = "/about" >ABOUT ME</a>
+        </div>
+    
+</div>
             
         </div>
         <footer class="footer footer-unloaded">
@@ -528,24 +555,6 @@ height:50vh;
 </footer>
     </div>
     <!-- toc -->
-    
-    <div class="toc-wrapper" style=
-    
-
-
-
-
-
-
-
-top:50vh;
-
-    >
-        <div class="toc-catalog">
-            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
-        </div>
-        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#作者-DEVshepard"><span class="toc-number">1.</span> <span class="toc-text">作者:DEVshepard</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number"></span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第一步-下载python"><span class="toc-number"></span> <span class="toc-text">第一步:下载python</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#注意-记得是python3-x-x版本不是python2-x-x版本-因为这两个版本的代码是不相容的-这里我选择了python3-5-2是因为我进行AI编程时相对比较好用-当然你也可以选择python3-6-x或者python3-7的版本"><span class="toc-number">0.1.</span> <span class="toc-text">注意:记得是python3.x.x版本不是python2.x.x版本,因为这两个版本的代码是不相容的,这里我选择了python3.5.2是因为我进行AI编程时相对比较好用,当然你也可以选择python3.6.x或者python3.7的版本</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第二步-安装python"><span class="toc-number"></span> <span class="toc-text">第二步:安装python</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#第三步-安装spyder"><span class="toc-number"></span> <span class="toc-text">第三步:安装spyder</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#现在我们就大功告成了！！！"><span class="toc-number">1.</span> <span class="toc-text">现在我们就大功告成了！！！,</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#切记-每次打开spyder都要通过”win-R”组合键打开cmd-并输入spyder3才能打开-如果你想快一点的话就找到spyder3的快捷方式复制粘贴到桌面就好了！"><span class="toc-number"></span> <span class="toc-text">切记,每次打开spyder都要通过”win+R”组合键打开cmd,并输入spyder3才能打开,如果你想快一点的话就找到spyder3的快捷方式复制粘贴到桌面就好了！</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#技术支持-DEVshepard-IT学研会"><span class="toc-number">1.</span> <span class="toc-text">技术支持:DEVshepard,IT学研会</span></a></li></ol>
-    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -908,8 +917,6 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
-    
-        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
